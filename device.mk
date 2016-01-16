@@ -14,8 +14,6 @@
 
 SONY_ROOT = device/sony/kanuti/rootdir
 
-SONY_PREBUILTS = device/sony/kanuti/prebuilt
-
 SOMC_PLATFORM := kanuti
 
 DEVICE_PACKAGE_OVERLAYS += \
@@ -102,7 +100,7 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
     $(SONY_ROOT)/system/usr/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
-#Audio
+# Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8916 \
@@ -124,7 +122,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     libqcompostprocbundle
 
-#GFX
+# GFX
 PRODUCT_PACKAGES += \
     gralloc.msm8916 \
     copybit.msm8916 \
@@ -136,7 +134,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
-#OMX
+# OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libstagefrighthw \
@@ -146,6 +144,7 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libOmxVenc
 
+# Lights
 PRODUCT_PACKAGES += \
     lights.kanuti
 
@@ -156,9 +155,8 @@ PRODUCT_PACKAGES += \
     Tag \
     nfc_nci.msm8916
 
-#GPS
+# GPS
 PRODUCT_PACKAGES += \
-	com.qualcomm.location \
     libloc_api_v02 \
     libloc_core \
     libloc_eng \
@@ -173,7 +171,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
    
-#WLAN
+# WLAN
 PRODUCT_PACKAGES += \
     p2p_supplicant.conf \
     dhcpcd.conf \
@@ -182,13 +180,14 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-#CAMERA
+# CAMERA
 PRODUCT_PACKAGES += \
     libmmcamera_interface \
     libmmjpeg_interface \
     libqomx_core \
     camera.msm8916
 
+# Keymaster
 PRODUCT_PACKAGES += \
     keystore.msm8916
 
@@ -198,6 +197,7 @@ PRODUCT_PACKAGES += \
     tad_static \
     ta_qmi_service
 
+# OSS
 PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep \
@@ -207,7 +207,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rmt_storage
 
-#Charger
+# Charger
 PRODUCT_PACKAGES += \
     charger_res_images
 
@@ -228,8 +228,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
+# APN list
+PRODUCT_COPY_FILES += \
+    device/sample/etc/old-apns-conf.xml:system/etc/old-apns-conf.xml \
+    device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Platform specific properties
-#
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
 
@@ -250,7 +254,6 @@ PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := \
 $(call add-product-dex-preopt-module-config,services,--compiler-filter=speed)
 
 # Platform specific default properties
-#
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0
 
