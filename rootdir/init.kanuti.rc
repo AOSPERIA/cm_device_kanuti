@@ -321,7 +321,7 @@ service netmgrd /system/vendor/bin/netmgrd
     class main
 
 #QCOM prop
-service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
