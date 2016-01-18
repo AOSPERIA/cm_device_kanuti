@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The AOSPERIA Project
+# Copyright (C) 2015-2016 The AOSPERIA Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
+    
+# Sensor HAL
+PRODUCT_PACKAGES += \
+	sensors.msm8916
    
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
