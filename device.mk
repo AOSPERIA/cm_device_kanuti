@@ -165,7 +165,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libxml2  
+    librmnetctl \
+    libxml2
    
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
