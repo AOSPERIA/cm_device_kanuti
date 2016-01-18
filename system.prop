@@ -4,7 +4,7 @@ rild.libargs=-d /dev/smd0
 ril.subscription.types=NV,RUIM
 
 # Default to LTE/GSM/WCDMA.
-ro.telephony.default_network=9
+ro.telephony.default_network=10
 
 # system props for the data modules
 ro.use_data_netmgrd=true
