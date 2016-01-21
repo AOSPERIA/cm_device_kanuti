@@ -14,6 +14,8 @@
 
 SONY_ROOT = device/sony/kanuti/rootdir
 
+SONY_PREBUILTS = device/sony/kanuti/prebuilt
+
 SOMC_PLATFORM := kanuti
 
 DEVICE_PACKAGE_OVERLAYS += \
