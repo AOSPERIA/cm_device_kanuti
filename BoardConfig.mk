@@ -131,7 +131,8 @@ ifeq ($(HOST_OS),linux)
 endif
 
 BUILD_KERNEL := true
--include vendor/sony/kernel/KernelConfig.mk
+TARGET_KERNEL_SOURCE := kernel/sony/msm
+TARGET_KERNEL_CONFIG := aosp_kanuti_tulip_defconfig
 
 # Include build helpers for QCOM proprietary
 -include vendor/qcom/proprietary/common/build/proprietary-build.mk
